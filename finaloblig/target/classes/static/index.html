@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="Array.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Title</title>
+    <style>
+        .input-container{
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+
+<body>
+<h1>Bestilling av kinobilletter</h1>
+<br>
+<br>
+<div class="input-container">
+<label for="filmListe">Velg film:</label>
+    <select id="filmliste">
+        <option value="Alladin">Alladin</option>
+        <option value="Dragerideren">Dragerideren</option>
+        <option value="Spirited Away">Spirited Away</option>
+        <option value="Pulp fiction">Pulp fiction</option>
+        <option value="Robocop">Robocop</option>
+    </select>
+</div>
+
+    <div style="margin-top: 10px;">
+<label for="Antallinn">Antall</label>
+<input type="number" id="antallinn" style="width: 100px;" min="1" max="10">
+        <p id="AntallError"></p>
+    </div>
+
+    <div class="input-container">
+        <label for="fornavninn">Fornavn:</label>
+        <input type="text" id="fornavninn">
+        <p id="FornavnError"></p>
+    </div>
+
+    <div class="input-container">
+        <label for="etternavninn">Etternavn:</label>
+        <input type="text" id="etternavninn">
+        <p id="EtternavnError"></p>
+    </div>
+
+     <div class="input-container">
+         <label for="tlfinn">Telefonnr:</label>
+        <input type="number" id="tlfinn" min="0" step="1">
+        <p id="TelefonError"></p>
+     </div>
+
+    <div class="input-container">
+        <label for="Epostinn">E-post:</label>
+        <input type="text" id="Epostinn">
+        <p id="EpostError"></p>
+    </div>
+<!--Knapp for å kjøpe billett-->
+<button onclick="bestillBillett()">Bestill Billett</button>
+
+<h3>Alle billetter</h3>
+<div id="billettTabell">
+    <!--Billetter vises her-->
+</div>
+<div id="bekreftelsesmelding"></div>
+
+<!--Knapp for å slette billett-->
+<button onclick="slettAllebilletter()">Slett alle billetter</button>
+
+</body>
+</html>
